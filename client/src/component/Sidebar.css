@@ -1,0 +1,95 @@
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    z-index: 1; /* Yüksek bir z-index değeri verin */
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 5px;
+  }
+  
+  .h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .container {
+    position: absolute;
+    width: 250px;
+    padding: 20px;
+    background-color: #f2dede;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Yüksek bir z-index değeri verin */
+    margin-top: 150px;
+    margin-left: 20px;
+  }
+  
+  #optionsAndInputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #optionsBox,
+  #inputBox,
+  #saveBox {
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  #optionsBox select,
+  #inputBox input[type="text"],
+  #saveBox button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  #optionsBox select {
+    color: #000;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  #inputBox input[type="text"] {
+    color: #000;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  #saveBox button {
+    background-color: #d53e3e;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  
+  #saveBox button:hover {
+    background-color: #45a049;
+  }
