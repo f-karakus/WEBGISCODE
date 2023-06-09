@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 
-const Sidebar = ({ category }) => {
+const Sidebar = ({ category, selectedCategories, handleCategory}) => {
   const [itemName, setItemName] = useState('');
   const [categoryId, setCategoryId] = useState('');
 
@@ -76,8 +76,23 @@ const Sidebar = ({ category }) => {
         <div id="saveBox">
           <button onClick={saveData}>Submit</button>
         </div>
+        <div className="category-layers">
+          <h2>Category Layers</h2>
+          {category.map((item, index) => (
+            <div key={index}>
+              <input
+                type="checkbox"
+                checked={selectedCategories.includes(item.name)}
+                onChange={() => handleCategory(item.name)}
+              />
+              <label>{item.name}</label>
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
+    
   );
 };
 

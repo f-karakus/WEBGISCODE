@@ -14,6 +14,7 @@ class MapComponent extends React.Component {
   render() {
     const { lat, lng, zoom } = this.state;
     const { items } = this.props;
+    console.log(items); // Add this line to check the items prop
 
     const center = [lat, lng];
 

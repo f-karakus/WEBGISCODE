@@ -19,8 +19,9 @@ app.get('/category', async (req, res) => {
 
 app.get('/item', async (req, res) => {
   try {
-    const categories = await pool.query('SELECT ST_X(ST_Transform(location, 4326)) AS longitude, ST_Y(ST_Transform(location, 4326)) AS latitude  ,item_name ,category_id FROM item');
-    res.json(categories.rows);
+    const { query } = req.query;
+    const items = await pool.query(query);
+    res.json(items.rows);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });
